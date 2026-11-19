@@ -680,23 +680,38 @@ figcaption {
   }
 
   .sticky-visual {
-    position: sticky;
-    top: 56px;
+    position: relative;
+    top: auto;
     min-height: auto;
     height: auto;
-    z-index: 20;
-    background: var(--bg-asphalt);
-    padding: 0.5rem 0;
+    z-index: auto;
+    background: transparent;
+    padding: 0;
   }
 
   .visual-stage {
     height: auto;
-    min-height: 360px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .stage-card,
+  .stage-card.active {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
 
   .scrolly-steps {
-    gap: 25vh;
-    padding-top: 4vh;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
   }
 
   .step-card {
